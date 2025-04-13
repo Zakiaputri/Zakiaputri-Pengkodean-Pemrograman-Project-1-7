@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salon Inventory System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Salon Inventory System</h1>
+            <img src="assets/salon-icon.png" alt="Salon Icon" class="salon-icon">
+        </header>
+        <div class="dashboard">
+            <div class="card total-items">
+                <h3>Total Items</h3>
+                <p id="total-items">0</p>
+            </div>
+            <div class="card low-stock">
+                <h3>Low Stock</h3>
+                <p id="low-stock">0</p>
+            </div>
+            <div class="card total-value">
+                <h3>Total Value</h3>
+                <p id="total-value">Rs. 0.00</p>
+            </div>
+        </div>
+
+        <div class="form-section">
+            <h2>Add New Item</h2>
+            <form id="add-item-form">
+                <input type="text" name="item_name" placeholder="Item Name" required>
+                <select name="category" required>
+                    <option value="Hair Care">Hair Care</option>
+                    <option value="Nail Care">Nail Care</option>
+                    <option value="Equipment">Equipment</option>
+                </select>
+                <input type="number" name="quantity" placeholder="Quantity" required>
+                <input type="number" name="price" placeholder="Price (Rs.)" step="0.01" required>
+                <input type="date" name="purchase_date" required>
+                <button type="submit">Add Item</button>
+            </form>
+        </div>
+
+        <div class="inventory-list">
+            <h2>Inventory List</h2>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Item Name</th>
+                        <th>Category</th>
+                        <th>Quantity</th>
+                        <th>Price</th>
+                        <th>Purchase Date</th>
+                        <th>Status</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="inventory-table"></tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

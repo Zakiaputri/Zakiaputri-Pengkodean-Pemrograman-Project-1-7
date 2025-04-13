@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aplikasi Penjualan Kue</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Aplikasi Penjualan Kue - UNDIP</h1>
+
+    <div class="form-section">
+      <input type="text" id="namaBarang" placeholder="Nama Kue" />
+      <input type="number" id="stokBarang" placeholder="Stok" />
+      <input type="number" id="hargaBarang" placeholder="Harga" />
+      <button onclick="tambahBarang()">Tambah Kue</button>
+    </div>
+
+    <table id="tabelBarang">
+      <thead>
+        <tr>
+          <th>Nama</th>
+          <th>Stok</th>
+          <th>Harga</th>
+          <th>Aksi</th>
+        </tr>
+      </thead>
+      <tbody></tbody>
+    </table>
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
